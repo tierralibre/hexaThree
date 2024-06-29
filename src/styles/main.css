@@ -1,83 +1,67 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  #app {
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  #hexInfo, #walletInfo, #walletActions, #claimOptions {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  #hexInfo {
-    top: 10px;
-    left: 10px;
-  }
-  
-  #walletInfo {
-    top: 10px;
-    right: 10px;
-  }
-  
-  #walletActions {
-    top: 80px;right: 10px;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-#claimOptions {
-  bottom: 10px;
-  left: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-#importWalletInput {
-  display: none;
-}
-
-label[for="importWalletInput"] {
-  padding: 10px 20px;
-  background: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  display: inline-block;
-}
-
-#errorMessage, #successMessage {
+#ui-overlay {
   position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   z-index: 1000;
 }
 
-#errorMessage {
-  background-color: #ff4444;
+#ui-overlay > div {
+  pointer-events: auto;
 }
 
-#successMessage {
+#wallet-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#hexagon-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#notification {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button, input[type="number"] {
+  margin: 5px 0;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+label[for="import-wallet"] {
   background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#import-wallet {
+  display: none;
 }

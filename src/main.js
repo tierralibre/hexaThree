@@ -1,6 +1,6 @@
 import { AOProcess } from './lib/ao-integration.js';
 import { getOrCreateWallet, getWalletAddress, backupWallet, importWallet } from './lib/wallet.js';
-import './components/global-hexagon-grid.js';
+import './components/aframe-h3-components.js';
 
 let selectedHexagon = null;
 let aoProcess;
@@ -18,6 +18,8 @@ async function initScene() {
     colorScheme: 'status'
   });
   h3World.setAttribute('hexagon-click-handler', '');
+
+  //h3World.setAttribute('hexagon-status', '');
 
   h3World.addEventListener('hexagon-clicked', handleHexagonClick);
 
