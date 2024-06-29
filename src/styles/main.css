@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  #app {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  #hexInfo, #walletInfo, #walletActions, #claimOptions {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  #hexInfo {
+    top: 10px;
+    left: 10px;
+  }
+  
+  #walletInfo {
+    top: 10px;
+    right: 10px;
+  }
+  
+  #walletActions {
+    top: 80px;right: 10px;
+}
+
+#claimOptions {
+  bottom: 10px;
+  left: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#importWalletInput {
+  display: none;
+}
+
+label[for="importWalletInput"] {
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+}
+
+#errorMessage, #successMessage {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+#errorMessage {
+  background-color: #ff4444;
+}
+
+#successMessage {
+  background-color: #4CAF50;
+}
